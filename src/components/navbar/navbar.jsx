@@ -14,7 +14,7 @@ function Navbar(props){
                 </div>
             </div>
 
-            <nav className="flex flex-col lg:flex-row gap-[24px] ">
+            <nav className="hidden md:flex flex-col lg:flex-row gap-[24px] ">
                 <div className="flex items-center gap-[6px]" >
                     <span className="text-base font-medium leading-6" >About Us</span>
                     <img src={arrowdown} alt="Down arrow icon" className="w-5" />  
@@ -44,7 +44,7 @@ function Navbar(props){
                 </div>
             </nav>
 
-            <button className="w-[115px] h-[40px] px-5 py-2 bg-[#6366F1] text-white rounded-[6px]  " >
+            <button className="hidden md:block w-[115px] h-[40px] px-5 py-2 bg-[#6366F1] text-white rounded-[6px]  " >
                 Join Us
             </button>
 
