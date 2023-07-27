@@ -7,9 +7,19 @@ import rightarrow from "../../images/right.svg"
 import Navbar from "../../components/navbar/navbar";
 import Faq from "../../components/faq/faq";
 import Event from "../../components/event/event";
+import { useMediaQuery } from "react-responsive";
+import NewsAndStories from "../../components/newsAndStories/newsAndStories";
+import Footer from "../../components/footer/footer";
 
 function Home(props){
+
+    const isMobile = useMediaQuery({
+        query:'(max-width:640px)'
+    })
     
+    const numNewsToShow = isMobile ? 2 : 4
+    const numEventsToShow = isMobile ? 3 : 5
+
     return(
         <div className="px-4 md:px-[50px] 2xl:px-[112px]" >
             <header>
@@ -20,17 +30,17 @@ function Home(props){
                 <div className="pt-4 md:pt-[40px] pb-16 md:pb-[104px] text-[#171717] " >
                     <img src={placeholder} alt="placeholder" className="w-full min-h-[240px] mb-8 md:mb-16 rounded-lg " />
                     <div className="flex flex-col text-center items-center ">
-                        <p className="text-[14px] font-semibold leading-5 " >
+                        <p className="text-[14px] font-semibold leading-5 text-[#404040] " >
                             JOIN THE TRIBE
                         </p>
-                        <h4 className=" text-[32px] md:text-[52px] font-bold lading-10 md:leading-[56px] mb-2 md:mb-4 " >
+                        <h4 className=" text-[32px] md:text-[52px] text-[#171717] font-bold lading-10 md:leading-[56px] mb-2 md:mb-4 " >
                             Home away from home.
                         </h4>
                         <p className="text-[#404040] text-base mb-4 md:mb-8 " >
                             A subheading that addresses the what, the why we should care and <br className="hidden md:block " /> hopefully some social proof.
                         </p>
-                        <button className="w-[172px] md:w-[250px] h-10 md:h-[48px] px-5 py-2 bg-[#6366F1] text-white rounded-[6px]  " >
-                            Join Us
+                        <button className="w-[172px] md:w-[250px] h-10 md:h-[48px] font-medium px-5 py-2 bg-[#6366F1] text-white rounded-[6px]  " >
+                            Join Us!
                         </button>
                     </div>
                 </div>
@@ -99,7 +109,7 @@ function Home(props){
 
                 <div className=" py-16 md:py-[104px] bg-gray-100 -mx-4 md:-mx-[50px] 2xl:-mx-[112px] px-4 md:px-[50px] 2xl:px-[112px] ">
                     <div className="flex justify-between mb-10" >
-                        <span className=" text-[28px] sm:text-[36px] font-semibold sm:leading-[44px] text-[#171717] " >
+                        <span className=" text-[28px] sm:text-[36px] font-semibold leading-9 sm:leading-[44px] text-[#171717] " >
                             For University Boys
                         </span>
 
@@ -161,7 +171,7 @@ function Home(props){
                 <div className="py-16 md:py-[104px] bg-gray-100 -mx-4 md:-mx-[50px] 2xl:-mx-[112px] px-4 md:px-[50px] 2xl:px-[112px] ">
                     <div className="flex justify-between mb-10" >
                         <span className=" text-[28px] sm:text-[36px] font-semibold sm:leading-[44px] text-[#171717] " >
-                            For Secondary School Boys
+                            {isMobile ? 'For Sec. School Boys' :'For Secondary School Boys'}
                         </span>
 
                         <div className="flex gap-2 min-w-fit items-center cursor-pointer ">
@@ -258,9 +268,9 @@ function Home(props){
                     <h4 className=" text-3xl md:text-4xl font-semibold text-center " >
                         Memories
                     </h4>
-                    <div className="flex flex-col md:h-[340px] text-white w-full ">
-                        <div className="bg-[url('images/mass_service.png')] bg-cover flex-1 rounded-t-md md:rounded-t-none md:rounded-l-md ">
-                            <div className="py-10 flex flex-col items-center justify-center h-full bg-[rgba(23,23,23,0.80)] rounded-t-md md:rounded-t-none md:rounded-l-md ">
+                    <div className="flex flex-col lg:flex-row md:h-[340px] text-white w-full ">
+                        <div className="bg-[url('images/mass_service.png')] bg-cover flex-1 rounded-t-md md:rounded-tr-none md:rounded-l-md ">
+                            <div className="py-10 flex flex-col items-center justify-center h-full bg-[rgba(23,23,23,0.80)] rounded-t-md md:rounded-tr-none md:rounded-l-md ">
                                 <p className="font-semibold text-xl text-center mb-2">
                                     Mass of St.<br className="hidden md:block" /> Josemaria,<br className="hidden md:block" /> 2023
                                 </p>
@@ -310,10 +320,10 @@ function Home(props){
                 </div>
 
                 <div className="py-16 md:py-[104px] flex flex-col items-center ">
-                    <h4 className="text-4xl font-extrabold text-center text-[#171717] mb-8 ">
+                    <h4 className="text-xl md:text-4xl font-extrabold text-center text-[#171717] mb-5 md:mb-8 ">
                         Frequently Asked Questions
                     </h4>
-                    <div className="w-3/4  max-w-[800px] 2xl:max-w-[1200px] ">
+                    <div className="px-3 md:px-0 w-full md:w-3/4 max-w-[800px] 2xl:max-w-[1200px] ">
                         <Faq />
                         <Faq />
                         <Faq />
@@ -323,61 +333,31 @@ function Home(props){
                 </div>
 
                 <div className="py-16 md:py-[104px]">                    
-                    <div className="flex justify-between mb-10" >
-                        <span className=" text-[36px] font-semibold leading-[44px] text-[#171717] " >
+                    <div className="flex gap-1 justify-between mb-10" >
+                        <span className=" text-[28px] sm:text-[36px] font-semibold leading-9 sm:leading-[44px] text-[#171717] " >
                             What’s happening at Uhere
                         </span>
 
                         <div className="flex gap-2 min-w-fit items-center cursor-pointer ">
-                            <span className="text-lg font-medium leading-7 text-[#4F46E5] " >
+                            <span className="text-sm md:text-lg font-medium leading-7 text-[#4F46E5] " >
                                 Visit blog
                             </span>
-                            <img src={rightarrow} alt="Right arrow" className="w-[18px] h-[14px] " />
+                            <img src={rightarrow} alt="Right arrow" className="w-[14px] md:w-[18px] h-[10px] md:h-[14px] " />
                         </div>
                     </div>
 
-                    <div className="flex flex-col lg:flex-row gap-10 ">                        
+                    <div className="flex flex-col lg:flex-row gap-12 md:gap-10 ">                        
                         <section className="flex-1 flex flex-col gap-6 ">
-                            <h5 className="text-[28px] font-medium leading-9 " >
+                            <h5 className="text-xl md:text-[28px] font-medium md:leading-9 " >
                                 News & Stories
                             </h5>                            
                             <div className="flex gap-8 flex-wrap ">
-                                <div className="flex flex-col gap-1 justify-start w-[280px]">
-                                    <img src={placeholder2} alt="placeholder" className="w-full h-[190px] mb-1 " />
-                                    <h5 className="text-[18px] leading-7 font-semibold">
-                                        Long Vacation Program for Secondary School Boys
-                                    </h5>
-                                    <p className="text-lg text-[#404040] " >
-                                        July 31, 2023
-                                    </p>
-                                </div>
-                                <div className="flex flex-col gap-1 justify-start w-[280px]">
-                                    <img src={placeholder2} alt="placeholder" className="w-full h-[190px] mb-1 " />
-                                    <h5 className="text-[18px] leading-7 font-semibold">
-                                        Long Vacation Program for Secondary School Boys
-                                    </h5>
-                                    <p className="text-lg text-[#404040] " >
-                                        July 31, 2023
-                                    </p>
-                                </div>
-                                <div className="flex flex-col gap-1 justify-start w-[280px]">
-                                    <img src={placeholder2} alt="placeholder" className="w-full h-[190px] mb-1 " />
-                                    <h5 className="text-[18px] leading-7 font-semibold">
-                                        Long Vacation Program for Secondary School Boys
-                                    </h5>
-                                    <p className="text-lg text-[#404040] " >
-                                        July 31, 2023
-                                    </p>
-                                </div>
-                                <div className="flex flex-col gap-1 justify-start w-[280px]">
-                                    <img src={placeholder2} alt="placeholder" className="w-full h-[190px] mb-1 " />
-                                    <h5 className="text-[18px] leading-7 font-semibold">
-                                        Long Vacation Program for Secondary School Boys
-                                    </h5>
-                                    <p className="text-lg text-[#404040] " >
-                                        July 31, 2023
-                                    </p>
-                                </div>                                
+                                {
+                                    // Change the 1234 to news item array later
+                                    [1,2,3,4].slice(0, numNewsToShow).map((item,i)=>(
+                                        <NewsAndStories key={i} />                                        
+                                    ))
+                                }
                             </div>
                             <button className="px-8 w-[598px] max-w-full py-2 border-[1px] border-[#D4D4D4] rounded-[6px] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]  " >
                                 View all news
@@ -385,15 +365,16 @@ function Home(props){
                         </section>
 
                         <section className="flex-1 flex flex-col gap-6 ">
-                            <h5 className="text-[28px] font-medium leading-9 " >
+                            <h5 className=" text-xl md:text-[28px] font-medium lmd:leading-9 " >
                                 Events
                             </h5>
-                            <div className="flex flex-col justify-between h-[604px] ">
-                                <Event />
-                                <Event />
-                                <Event />                      
-                                <Event />
-                                <Event />                                          
+                            <div className="flex flex-col justify-between gap-6 md:h-[604px] ">
+                                {
+                                    // Change the 1234 to events item array later
+                                    [1,2,3,4,5].slice(0, numEventsToShow).map((item,i)=>(
+                                        <Event key={i} />                                        
+                                    ))
+                                }
                             </div>
 
                             <button className="px-8 py-2 border-[1px] border-[#D4D4D4] rounded-[6px] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]  " >
@@ -406,24 +387,26 @@ function Home(props){
 
                 <div className="py-16 md:py-[104px]">
                     <div className="flex flex-col text-center items-center ">
-                        <p className="text-[14px] font-semibold leading-5 " >
+                        <p className="text-[14px] text-[#404040] font-semibold leading-5 " >
                             JOIN THE TRIBE
                         </p>
-                        <h4 className=" text-[52px] font-bold leading-[56px] mb-4 " >
-                            Frequent Uhere
+                        <h4 className="text-[32px] md:text-[52px] font-bold md:leading-[56px] mb-4 -tracking-[0.64px] " >
+                            { isMobile ? 'Home away from home.':'Frequent Uhere'}
                         </h4>
-                        <p className="text-[#404040] text-lg mb-8 " >
-                            Apply to become a library user, a resident or a boys club member. Or <br /> 
+                        <p className="text-[#404040] text-base md:text-lg mb-4 md:mb-8 " >
+                            Apply to become a library user, a resident or a boys club member. Or <br className="hidden md:block" /> 
                             perhaps you want to sign up for the vacation program; the button is below.
                         </p>
                         <button className="w-[250px] h-[48px] px-5 py-2 bg-[#6366F1] text-white rounded-[6px]  " >
-                            Join Us
+                            Join Us!
                         </button>
                     </div>
-                </div>
-               
-
+                </div>               
             </main>
+            
+            <footer className="bg-[#E5E5E5] -mx-4 md:-mx-[50px] 2xl:-mx-[112px] px-4 md:px-[50px] 2xl:px-[112px] " >
+                <Footer />
+            </footer>
         </div>
     )
 }
