@@ -25,9 +25,9 @@ const About = (props) => {
                     <h2 className=" text-[40px] leading-[48px] text-[#171717] font-bold text-center mb-2" >
                         Who we are
                     </h2>
-                    <div className="text-[28px] text-[#404040] ">
+                    <p className="text-lg text-[#404040] ">
                         Semper vel adipiscing laoreet iaculis sed at. Ac urna nibh scelerisque congue velit. Quam eget quisque interdum dictumst eleifend venenatis cras feugiat. Nunc diam risus sagittis in adipiscing nunc. Pharetra aliquam gravida bibendum orci diam nisi sem id. Id commodo volutpat platea nisi, nec venenatis pulvinar neque, ac. Odio dolor id potenti aliquam mi in nunc at sollicitudin. Magna felis, leo sed nec.
-                    </div>
+                    </p>
                 </div>
 
                 <div className="flex flex-col md:flex-row justify-between md:px-[104px] py-[104px] ">
@@ -147,15 +147,15 @@ const About = (props) => {
                         }
                     </div> */}
                     <div className="flex flex-wrap justify-center ">
-                        <img src= {swimImage} alt = 'Gallery pics and will be changed to item.alt later' className="min-w-[176px] max-w-[405px] h-[248px] " />
-                        <img src= {massImage2} alt = 'Gallery pics and will be changed to item.alt later' className="min-w-[176px] max-w-[405px] h-[248px] " />
-                        <img src= {massImage} alt = 'Gallery pics and will be changed to item.alt later' className="min-w-[176px] max-w-[405px] h-[248px] " />
-                        <img src= {massImage} alt = 'Gallery pics and will be changed to item.alt later' className="min-w-[176px] max-w-[405px] h-[248px] " />
-                        <img src= {swimImage} alt = 'Gallery pics and will be changed to item.alt later' className="min-w-[176px] max-w-[405px] h-[248px] " />
-                        <img src= {massImage2} alt = 'Gallery pics and will be changed to item.alt later' className="min-w-[176px] max-w-[405px] h-[248px] " />                        
-                        <img src= {massImage2} alt = 'Gallery pics and will be changed to item.alt later' className="min-w-[176px] max-w-[405px] h-[248px] " />
-                        <img src= {massImage} alt = 'Gallery pics and will be changed to item.alt later' className="min-w-[176px] max-w-[405px] h-[248px] " />
-                        <img src= {swimImage} alt = 'Gallery pics and will be changed to item.alt later' className="min-w-[176px] max-w-[405px] h-[248px] " />
+                        <img src= {swimImage} alt = 'Gallery pics and will be changed to item.alt later' className="min-w-[176px] max-w-full md:max-w-[405px] md:h-[248px] " />
+                        <img src= {massImage2} alt = 'Gallery pics and will be changed to item.alt later' className="min-w-[176px] max-w-full md:max-w-[405px] md:h-[248px] " />
+                        <img src= {massImage} alt = 'Gallery pics and will be changed to item.alt later' className="min-w-[176px] max-w-full md:max-w-[405px] md:h-[248px] " />
+                        <img src= {massImage} alt = 'Gallery pics and will be changed to item.alt later' className="min-w-[176px] max-w-full md:max-w-[405px] md:h-[248px] " />
+                        <img src= {swimImage} alt = 'Gallery pics and will be changed to item.alt later' className="min-w-[176px] max-w-full md:max-w-[405px] md:h-[248px] " />
+                        <img src= {massImage2} alt = 'Gallery pics and will be changed to item.alt later' className="min-w-[176px] max-w-full md:max-w-[405px] md:h-[248px] " />                        
+                        <img src= {massImage2} alt = 'Gallery pics and will be changed to item.alt later' className="min-w-[176px] max-w-full md:max-w-[405px] md:h-[248px] " />
+                        <img src= {massImage} alt = 'Gallery pics and will be changed to item.alt later' className="min-w-[176px] max-w-full md:max-w-[405px] md:h-[248px] " />
+                        <img src= {swimImage} alt = 'Gallery pics and will be changed to item.alt later' className="min-w-[176px] max-w-full md:max-w-[405px] md:h-[248px] " />
                     </div>
                     <button className=" px-8 py-[10px] border-[1px] rounded-md border-[#D4D4D4] text-lg font-medium text-[#404040] text-center shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]" >
                         View more photos from the archives

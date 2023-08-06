@@ -3,9 +3,9 @@ import logoBlock from "../../images/Logo block.svg"
 const Footer = (props) => {
     
     return(
-        <div className="py-16 flex flex-col gap-16 text-sm md:text-base ">
+        <div className="py-16 flex flex-col text-sm md:text-base ">
             
-            <div className="flex flex-wrap gap-10 md:justify-between ">                                                
+            <div className="flex flex-wrap gap-10 md:justify-between xl:pr-[300px] mb-16 ">                                                
                 <div className="">
                     <h6 className="text-[#A3A3A3] font-medium mb-2 md:mb-4 " >
                         Get in touch
@@ -69,6 +69,8 @@ const Footer = (props) => {
                     </div>
                 </div>
             </div>
+
+            <hr className="border-1 border-[#d7d5d5] w-full hidden md:block mb-8 " />
 
             <div className="flex gap-[10px] flex-col md:flex-row items-center md:justify-between">
                 <img src={logoBlock} alt="Uhere Logo" className="w-[100px] md:w-[131px] h-[32px] md:h-[44px] " />

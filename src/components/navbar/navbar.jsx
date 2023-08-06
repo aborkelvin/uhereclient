@@ -34,23 +34,31 @@ function Navbar(props){
                     </div>
                 </Link>
 
-                <div className="flex items-center gap-[6px] cursor-pointer " >
-                    <span className="text-base font-medium leading-6" >Prospective Students</span>
-                    <img src={arrowdown} alt="Down arrow icon" className="w-5" />  
-                </div>
+                <Link to = '/prospectivestudents' >
+                    <div className="flex items-center gap-[6px] cursor-pointer " >
+                        <span className="text-base font-medium leading-6" >Prospective Students</span>
+                        <img src={arrowdown} alt="Down arrow icon" className="w-5" />
+                    </div>
+                </Link>
 
-                <div className="flex items-center gap-[6px] cursor-pointer " >
-                    <span className="text-base font-medium leading-6" >Activities</span>
-                    <img src={arrowdown} alt="Down arrow icon" className="w-5" />  
-                </div>
+                <Link to = '/activities' >
+                    <div className="flex items-center gap-[6px] cursor-pointer " >
+                        <span className="text-base font-medium leading-6" >Activities</span>
+                        <img src={arrowdown} alt="Down arrow icon" className="w-5" />
+                    </div>
+                </Link>
 
-                <div className="flex items-center gap-[6px] cursor-pointer " >
-                    <span className="text-base font-medium leading-6" >Donate</span>
-                </div>
+                <Link to = '/donate' >
+                    <div className="flex items-center gap-[6px] cursor-pointer " >
+                        <span className="text-base font-medium leading-6" >Donate</span>
+                    </div>
+                </Link>
 
-                <div className="flex items-center gap-[6px] cursor-pointer " >
-                    <span className="text-base font-medium leading-6" >Contact</span>                    
-                </div>
+                <Link to = '/contact' >
+                    <div className="flex items-center gap-[6px] cursor-pointer " >
+                        <span className="text-base font-medium leading-6" >Contact</span>
+                    </div>
+                </Link>
 
                 <div className="flex items-center gap-[6px] cursor-pointer " >
                     <span className="text-base font-medium leading-6" >News and Events</span>
